@@ -1,0 +1,146 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');   */
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Kanit&family=Press+Start+2P&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+.main{
+  /* border: 1px solid red; */
+  background: url(./images/hero.jpg);
+  height: 60vh;
+  background-size: cover;
+}
+.main .cont{
+  padding: 0rem 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  background-color: rgb(0, 0, 0,0.7);
+}
+.cont .text{
+  /* border: 1px solid red; */
+  position: absolute;
+  color: black;
+  margin: 0 2rem;
+  width: 50%;
+  text-align: center;
+  text-shadow:
+  -2px 0px 0px white,
+  2px 0px 0px white,
+  0px -2px 0px white,
+  0px 2px 0px white;
+}
+
+
+.cont .text p{
+  font-size: 1.2rem;
+  line-height: 2;
+  font-family: 'Black Ops One', cursive;
+}
+.cont .text h2{
+  font-family: 'Press Start 2P', cursive;
+  line-height: 2;
+  color: blueviolet;
+  font-size: 3rem;
+  
+}
+.blackscreen{
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  z-index: 10;
+  animation: light 2s linear 0.2s;
+  right: 100%;
+  width: 100%;
+  overflow: hidden;
+  height: 15rem;
+}
+@keyframes light {
+  0%{
+    right: 0;
+  }
+  50%{
+    right: 50%;
+  }
+  100%{
+    right: 100%;
+  }
+  
+}
+.cont .img{
+  /* border: 1px solid red; */
+  width: 80%;
+  position: absolute;
+  z-index: 11;
+}
+
+
+
+.cont .img img{
+  position: relative;
+  transform: scaleX(-1);
+  height: 15rem;
+  left: 0%;
+  animation: move 2s linear 0.2s  alternate;
+}
+@keyframes move {
+  0%{
+    left: 100%;
+  }
+  50%{
+    /* transform: scaleX(-1); */
+    left: 50%;
+  }
+  100%{
+    left: 0;
+  }
+  
+}
+
+@media screen and (max-width:400px) {
+  *{
+    font-size: 12px;
+    margin: 0;
+  }
+  .main{
+    height: 30%;
+    width: 100vw;
+    height: 30vh;
+  }
+  .main .cont{
+    height: 30vh;
+    /* width: 100vw; */
+    /* border: 1px solid red; */
+    padding: 0;
+  }
+  .blackscreen{
+    height: 30vh;
+  }
+  .cont .text {
+    width: 80vw;
+    /* border: 1px solid red; */
+  }
+  .cont .text h2{
+    font-size: 2rem;
+  }
+  .cont .img img{
+    height: 5rem;
+  }
+}
+
+.navbar{
+  /* border: 1px solid red; */
+  background-color: black;
+  padding: 1rem;
+  color: white;
+}
+.navbar ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.navbar ul li{
+  font-family: 'Kanit', sans-serif;
+    margin: 0 1rem;
+}

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Kanit&family=Press+Start+2P&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.container{
+    width: 100vw;
+    height: 80vh;
+    /* background-image: url(./images/background.jpg); */
+    background: url(./images/hanging-pocket-watch-falling-sequins.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.content
+{
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.content h1{
+    font-size: 64px;
+    font-weight: 600;
+    font-family: 'Black Ops One', cursive;
+}
+
+.content span{
+    color: red;
+}
+
+.content button{
+    background: transparent;
+    border: 2px solid#fff;
+    outline: none;
+    padding: 12px 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    cursor: pointer;
+
+}
+
+.launch-time{
+    display: flex;
+}
+.launch-time div p{
+    flex-basis: 100px;
+}
+.launch-time div p{
+    font-size: 60px;
+    margin-bottom: -14px; 
+}
+
+.ddmmyy{
+    margin: 0 1rem;
+    text-align: center;
+    font-family: 'Black Ops One', cursive;
+}
+.ddmmyy p, .ddmmyy span{
+    font-family: 'Black Ops One', cursive;
+}
+
+.rocket{
+    width: 10rem;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: rocket 4s linear infinite;
+}
+@keyframes rocket {
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    100%{
+        bottom: 105%;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:400px) {
+    *{
+        font-size: 12px;
+    }
+    .container{
+        height: 40vh;
+        padding: 1.51rem;
+    }
+    .content h1{
+        font-size: 1rem;
+    }
+}
