@@ -3,7 +3,7 @@ import './About.css'
 export default function About() {
     return (
         <>
-            <div className="body">
+            <div className="bodys">
                 <div className="head">
                     <div className="shwd">About us</div>
                     <h1>About Us</h1>
@@ -15,10 +15,10 @@ export default function About() {
                 </div>
                 <br /><br />
                 <section className="faq">
-                <div className="head">
-                    <div className="shwd">FAQ</div>
-                    <h1>FAQ</h1>
-                </div>
+                    <div className="head">
+                        <div className="shwd">FAQ</div>
+                        <h1>FAQ</h1>
+                    </div>
                     <div className="faq-box">
                         <h2>What is IEEE CS CHAPTER?</h2>
                         <div className="answer" >Computer Society (CS), is a technical and student chapter from IEEE,

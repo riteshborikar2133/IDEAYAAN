@@ -5,13 +5,15 @@ import Main from './Compnents/Main'
 import Navbar from './Compnents/Navbar'
 import Timer from './Compnents/Timer/Timer'
 import About from './Compnents/About/About'
+import Speaker from './Compnents/Speaker&Sponsers/Speaker'
 function App() {
   return (
     <>
       <Navbar />
       <Hero />
-      <Timer/>
+      {/* <Timer/> */}
       <About/>
+      <Speaker/>
       {/* <Main/> */}
     </>
   )

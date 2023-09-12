@@ -1,146 +1,245 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');   */
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Kanit&family=Press+Start+2P&display=swap');
-*{
+
+* {
   padding: 0;
   margin: 0;
   font-size: 18px;
 }
-.main{
+
+.hero {
   /* border: 1px solid red; */
   background: url(./images/hero.jpg);
-  height: 60vh;
+  /* height: 60vh; */
+  width: 100%;
   background-size: cover;
 }
-.main .cont{
+
+.main .cont {
   padding: 0rem 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60vh;
-  background-color: rgb(0, 0, 0,0.7);
+  background-color: rgb(0, 0, 0, 0.7);
 }
-.cont .text{
+
+.cont .text {
   /* border: 1px solid red; */
   position: absolute;
   color: black;
   margin: 0 2rem;
-  width: 50%;
+  /* width: 60%; */
   text-align: center;
   text-shadow:
-  -2px 0px 0px white,
-  2px 0px 0px white,
-  0px -2px 0px white,
-  0px 2px 0px white;
+    -2px 0px 0px white,
+    2px 0px 0px white,
+    0px -2px 0px white,
+    0px 2px 0px white;
 }
 
 
-.cont .text p{
+.cont .text p {
   font-size: 1.2rem;
   line-height: 2;
   font-family: 'Black Ops One', cursive;
 }
-.cont .text h2{
+
+.cont .text h2 {
   font-family: 'Press Start 2P', cursive;
   line-height: 2;
-  color: blueviolet;
+  color: white;
   font-size: 3rem;
-  
+  text-shadow: 0px 4px 1px red;
+
 }
-.blackscreen{
+
+.blackscreen {
   position: absolute;
   background-color: rgb(0, 0, 0);
+  background: linear-gradient(90deg,20%grey, 80% black );
   z-index: 10;
-  animation: light 2s linear 0.2s;
+  animation: light 3s linear 0.2s;
   right: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow: hidden;  
   height: 15rem;
+  height: 100vh;
+}
+
+.regbtn{
+  background: black;
+  border: 2px solid red;
+  font-size: 1rem;
+  margin: 0rem;
+  border-radius: 0.4rem;
+  color: aliceblue;
+  padding: 0.41rem;
+  font-family:'Black Ops One', cursive;
+}
+.regbtn:hover{
+  background-color: red;
+  font-family: 'Press Start 2P', cursive;
+  color: black;
 }
 @keyframes light {
-  0%{
-    right: 0;
+  0% {
+    left: 0;
   }
-  50%{
-    right: 50%;
+
+  50% {
+    left: 50%;
   }
-  100%{
-    right: 100%;
+
+  100% {
+    left: 100%;
   }
-  
+
 }
-.cont .img{
+
+.cont .img {
   /* border: 1px solid red; */
   width: 80%;
   position: absolute;
   z-index: 11;
+  /* border: 1px solid red; */
 }
 
 
 
-.cont .img img{
-  position: relative;
+.cont .img img {
   transform: scaleX(-1);
   height: 15rem;
-  left: 0%;
-  animation: move 2s linear 0.2s  alternate;
 }
+.cont .img .rover{
+  position: relative;
+  left: 80%;
+  background: url(./images/kisspng-rover-royalty-free-outer-space-space-rover-5b1000ee670ac6.3969716715277754704221.png);
+  background-size: cover;
+  /* border: 1px solid red; */
+  height: 10rem;
+  width: 10rem;
+  animation: move 3s linear 0.2s alternate;
+}
+
 @keyframes move {
-  0%{
-    left: 100%;
-  }
-  50%{
-    /* transform: scaleX(-1); */
-    left: 50%;
-  }
-  100%{
+  0% {
     left: 0;
   }
-  
-}
 
-@media screen and (max-width:400px) {
-  *{
-    font-size: 12px;
-    margin: 0;
+  50% {
+    left: 50%;
   }
-  .main{
-    height: 30%;
-    width: 100vw;
-    height: 30vh;
-  }
-  .main .cont{
-    height: 30vh;
-    /* width: 100vw; */
-    /* border: 1px solid red; */
-    padding: 0;
-  }
-  .blackscreen{
-    height: 30vh;
-  }
-  .cont .text {
-    width: 80vw;
-    /* border: 1px solid red; */
-  }
-  .cont .text h2{
-    font-size: 2rem;
-  }
-  .cont .img img{
-    height: 5rem;
+
+  100% {
+    left: 80%;
   }
 }
 
-.navbar{
+
+.navbar {
   /* border: 1px solid red; */
   background-color: black;
   padding: 1rem;
   color: white;
+  /* width: 100%; */
 }
-.navbar ul{
+
+.navbar ul {
   display: flex;
   justify-content: center;
   list-style: none;
 }
-.navbar ul li{
+
+.navbar ul li {
   font-family: 'Kanit', sans-serif;
-    margin: 0 1rem;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.timer{
+  width: 100%;
+}
+.content{
+  text-align: center;
+  background-color: rgb(0, 0, 0, 0.7);
+  padding: 1.52rem 0rem;
+}
+.content h3{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.52rem;
+  color: white;
+}
+.launch-time{
+  display: flex;
+  /* font-family: 'Kanit', sans-serif; */
+  font-family: 'Black Ops One', cursive;
+  color: white;
+  justify-content: center;
+}
+.ddmmyy{
+  /* border: 1px solid red; */
+  text-align: center;
+  margin: 1rem 2rem;
+}
+.ddmmyy p{
+  font-size: 3rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin: 1rem 0rem ;
+  width: 6rem;
+}
+.ddmmyy:nth-child(even){
+  color: red;
+}
+
+
+@media screen and (max-width:400px) {
+  * {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .main {
+    width: 100vw;
+    height: 40vh;
+  }
+
+  .main .cont {
+    height: 40vh;
+    /* width: 100vw; */
+    /* border: 1px solid red; */
+    padding: 0;
+  }
+
+  .blackscreen {
+    height: 40vh;
+  }
+
+  .cont .text {
+    width: 80vw;
+    /* border: 1px solid red; */
+  }
+
+  .cont .text h2 {
+    font-size: 2.8rem;
+  }
+
+  .cont .img .rover {
+    height: 4rem;
+    width: 4rem;
+  }
+  .content h3{
+    font-size: 1.2rem;
+  }
+  .navbar{
+    width: 94vw;
+  }
+  .ddmmyy{
+    margin: 0rem;
+  }
+  .ddmmyy p{
+    padding: .0rem;
+    font-size: 1.4rem;
+  }
 }
