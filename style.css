@@ -48,7 +48,7 @@ body {
 .nav ul li a {
     /* border: 1px solid red; */
     margin: 0rem 2rem;
-    padding: .51rem .3rem;
+    padding: .51rem 1rem;
     text-decoration: none;
     color: white;
 }
@@ -90,19 +90,25 @@ body {
     color: white;
     /* border: 1px solid red; */
     text-align: center;
-    margin: 6rem 0rem;
+    /* margin: 6rem 0rem; */
+    /* height: 100vh; */
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
 }
-.herocontent{
+/* .herocontent{
     width: 100vw;
-}
+} */
 .hero h1 {
-    font-size: 5rem;
+    font-size: 5.5rem;
     color: transparent;
-    -webkit-text-stroke: 2px rgb(250, 226, 10);
+    -webkit-text-stroke: 1.5px rgb(250, 226, 10);
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
     /* font-family: 'Philosopher', sans-serif; */
     font-family: 'Alfa Slab One', cursive;
+    letter-spacing: 20px;
 }
 
 .hero p {
@@ -111,8 +117,8 @@ body {
 
 .launch-time {
     display: flex;
-    gap: 20px;
-    margin: 2rem;
+    gap: 15px;
+    margin: 2rem 0rem;
     /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
@@ -124,6 +130,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 100px
 }
 
 .time-box:nth-child(even) {
@@ -293,11 +300,16 @@ body {
     width: 70vw;
     margin: auto;
     color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+     /* overflow: hidden; */
 }
 
 .faq-content {
     margin: 0 auto;
-    /* height: 500px; */
+    width: 500px;
 }
 
 .faq-question {
@@ -338,7 +350,7 @@ body {
 
 .plus {
     position: absolute;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top: 4px;
     z-index: 5;
     font-size: 42px;
@@ -428,8 +440,9 @@ body {
 
 .timeline-content {
     background-color: #131315cf;
-    padding: 30px;
+    padding: 25px;
     border-radius: 5px;
+    /* border: 1px solid yellow; */
 }
 
 .timeline-content h3 {
@@ -463,6 +476,7 @@ body {
     padding: 15px;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 .venuecont .vleft {
@@ -503,6 +517,9 @@ body {
     text-align: center;
 }
 
+.about .heading ,.contact .heading{
+    margin: 80px 0px;
+}
 .ieeelogo {
     background-color: white;
     height: 9rem;
@@ -597,9 +614,20 @@ body {
     }
 
     .faqs{
-        /* width: 80vw; */
-        margin: auto;
+        width: 80vw;
+        /* margin: 0px 10px; */
     }
+    .faq-content {
+        /* margin: 0 auto; */
+        /* width:93vw; */
+        width: 300px;
+    }
+    .plus {
+        /* position: absolute; */
+        margin-left: 13px;
+        /* margin-top: 4px; */
+        /* z-index: 5; */
+        font-size: 33px;}
     .panel-title{
         /* border: 1px solid red; */
         font-size: 1.3rem;
@@ -678,12 +706,14 @@ body {
         height: 3rem;
     }
 }
-@media screen and (max-width:500px) {
+@media screen and (max-width:600px) {
     * {
         font-size: 10px;
     }
     .time-box{
         margin: 0 1.2rem;
+            
+            width: auto;
         
     }
     .launch-time div p {
@@ -704,16 +734,28 @@ body {
         margin: 2rem 0;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: 90vh;
     }
 
     .hero h1{
         font-size: 5rem;
+        /* font-size: 4rem; */
+        padding-left: 10px;
+        letter-spacing: 10px;
     }
-    .faqs{
-        /* width: 80vw; */
+    .rocket img {
+        height: 13rem;
+        
+    }
+    /* .faqs{
+        width: 80vw;
         margin: auto;
+    } 
+    .faq-content {
+        margin: 0 auto;
+        width: 280px;
     }
+    */
     .panel-title{
         /* border: 1px solid red; */
         font-size: 1.3rem;
@@ -780,9 +822,114 @@ body {
         text-align: center;
         margin-bottom: 2rem;
     }
-
+    .about .heading ,.contact .heading{
+        margin: 40px 0px;
+    }
     .contactlink a img {
         font-size: 5rem;
         height: 3rem;
     }
 }
+
+@media screen and (max-width: 600px){
+.hero h1 {
+    /* font-size: 5rem; */
+    font-size: 4rem;
+    /* padding-left: 10px; */
+    /* letter-spacing: 10px; */
+}
+}
+
+/* footer css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI';
+    font-weight: 400;
+    background-color: #ededed;
+  }
+  
+  .footer {
+    padding: 40px 0;
+    /* background-color: #ffffff; */
+    color: #d1dcff;
+  }
+  
+  .footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: #4b4c4d;
+  }
+  
+  .footer .social a {
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+  }
+  
+  .footer .social a:hover {
+    opacity: 0.9;
+  }
+  
+  .footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  
+  .footer ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+    margin: 0rem 2rem;
+    padding: 0.51rem 0.3rem;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .footer ul li {
+    display: inline-block;
+    /* padding: 0 15px; */
+  }
+  
+   
+  .footer ul a {
+    font-size: 13px;
+    padding: 0.3rem 0.5rem;
+  }
+  .footer ul a:hover {
+    opacity: 1;
+  }
+  
+  .footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+  }
+
+  .social i{
+    font-size: 20px;
+    color: yellow;
+  }
+
+  .heading,.vleft h3{
+    letter-spacing: 3px;
+  }
