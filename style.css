@@ -292,7 +292,7 @@ body {
 }
 
 .sponsers img {
-    width: 130px;
+    width: 12rem;
 }
 
 
@@ -508,6 +508,23 @@ body {
 }
 
 /* responsive */
+
+.judging{
+    /* border: 1px solid red; */
+    max-width: 70rem;
+    margin: 10rem auto;
+    color: white;
+}
+.judging ul{
+    margin: 1.5rem;
+}
+.judging ul li{
+    margin: 1.5rem;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+
 
 
 .about {
