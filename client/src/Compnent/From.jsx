@@ -6,21 +6,26 @@ export default function From() {
     const [vote, setVote] = useState();
 
     const getdata = async () => {
-        const res = await axios.get("http://localhost:5005/getvote")
+        const res = await axios.get("https://ideayaanvote.onrender.com/getvote")
         if (res) {
-            console.log(res.data)
+            // console.log(res.data)
             setData(res.data)
         }
     }
 
     const handlesubmit = async (e) => {
         e.preventDefault();
-        const res = await axios.put("http://localhost:5005/", vote)
-        if (res) {
-            console.log(res)
-            console.log(vote)
-        }
         const res1 = await axios.post("http://localhost:5005/", vote)
+        if(res1){
+            console.log(vote)    
+        }
+        if(res1.data.message=== "Vote Recorded"){
+            const res = await axios.put("http://localhost:5005/", vote)
+            alert(res.data.message)
+        }
+        else{
+            alert(res1.data.message)
+        }
     }
 
     const handlechange = async (e) => {

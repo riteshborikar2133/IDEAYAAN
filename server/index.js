@@ -25,7 +25,7 @@ app.post('/', async (req, res) => {
         }
     }
     catch (err) {
-        res.send({ message: "error" })
+        res.send({ message: "you can only vote once" })
         console.log(err)
     }
 })
