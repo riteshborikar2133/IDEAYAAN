@@ -15,12 +15,12 @@ export default function From() {
 
     const handlesubmit = async (e) => {
         e.preventDefault();
-        const res1 = await axios.post("http://localhost:5005/", vote)
+        const res1 = await axios.post("https://ideayaanvote.onrender.com/", vote)
         if(res1){
             console.log(vote)    
         }
         if(res1.data.message=== "Vote Recorded"){
-            const res = await axios.put("http://localhost:5005/", vote)
+            const res = await axios.put("https://ideayaanvote.onrender.com/", vote)
             alert(res.data.message)
         }
         else{
@@ -41,9 +41,10 @@ export default function From() {
             <h1>IDEAYAAN</h1>
             <div className="voteform">
                 <form action="" onSubmit={handlesubmit}>
-                    <input type="email" name="Email" id="" placeholder='Enter Email' onChange={handlechange} />
-                    <select name='TeamName' onChange={handlechange}>
-                        <option value="">Vote for team</option>
+                    <input type="email" name="Email" id="" placeholder='Enter Email' onChange={handlechange} required/> <br />
+                    <input type="text" name="OwnTeam" id="" placeholder='Enter Your Team Name' onChange={handlechange} /> <br />
+                    <select name='TeamName' onChange={handlechange} required> 
+                        <option value="">Vote for team</option> 
                         {
                             data.map((cand) => {
                                 return (
@@ -52,8 +53,8 @@ export default function From() {
                             }
                             )
                         }
-                    </select>
-                    <input type="submit" value="SUBMIT" />
+                    </select> <br />
+                    <input type="submit" className='regbtn' value="SUBMIT" />
                 </form>
             </div>
         </>

@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dancing+Script:wght@700&family=Poppins&display=swap');
-
-
 * {
     margin: 0;
     padding: 0;
@@ -13,26 +11,84 @@ body {
     scroll-behavior: smooth;
 }
 
+
 h1{
-   
     font-size: 5.5rem;
-    color: transparent;
-    -webkit-text-stroke: 1.5px rgb(250, 226, 10);
     font-family: 'Alfa Slab One', cursive;
-    letter-spacing: 20px;
     text-align: center;
+    -webkit-text-stroke: 0.12rem yellow;
+    color: transparent;
+    font-family: 'Alfa Slab One', cursive;
 }
-/* .voteform form input{ */
-    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
-    /* font-family: 'Dancing Script', cursive; */
-    /* font-family: 'Philosopher', sans-serif; */
-    /* text-align: center; */
-/* }    */
-form{
+.voteform{
+    /* border: 1px solids red; */
+    margin: 2rem auto;
+    /* width: 80%; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.voteform form{
     /* border: 1px solid red; */
-    text-align: center;
+    padding: 2rem;
+    border-radius: 0.2rem;
+    box-shadow: 0px 0px 10px rgb(80, 80, 80);
+    background-color: #20202082;
 }
-form input{
-    /* display: block; */
-    margin: 0 2rem;
+.voteform form input{
+    margin: 1rem;
+    width: 20rem;
+    text-align: center;
+    background-color: transparent;
+    color: aliceblue;
+    border: none;
+    border: 1px solid yellow;
+    padding: 0.51rem;
+}
+.voteform form select{
+    text-align: center;
+    margin: 1rem;
+    width: 20rem;
+    padding: 0.51rem;
+    background-color: transparent;
+    color: aliceblue;
+    border: none;
+    border: 1px solid yellow;
+}
+.voteform form option{
+    text-align: center;
+    margin: 1rem;
+    width: 20rem;
+    /* background-color: transparent; */
+    color: black;
+    padding: 0.51rem;
+
+}
+.voteform form .regbtn{
+    /* border: 1px solid lawngreen; */
+    background-color: yellow;
+    color: black;
+    padding: 0.51rem;
+}
+.voteform form .regbtn:hover{
+    background-color: black;
+    color: yellow;
+    position: relative;
+    top: -2px;
+    box-shadow: 0px 1px 2px yellow;
+}
+
+@media screen and (max-width:600px) {
+    *{
+        font-size: 12px;
+    }
+    h1{
+        font-size: 3rem;
+        margin: 5rem;
+    }
+    .voteform{
+        font-size: 2rem;
+    }
 }

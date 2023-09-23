@@ -6,6 +6,10 @@ const votingsch = mongoose.Schema({
     Email:{
         type:String,
         unique:true,
+    },
+    OwnTeam:{
+        type:String,
+        unique:true,    
     }
 })
 
